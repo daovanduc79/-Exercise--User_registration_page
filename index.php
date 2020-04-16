@@ -1,12 +1,6 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trang đăng ký người dùng</title>
-
     <style>
         .error {
             color: #FF0000;
@@ -26,9 +20,10 @@
 <body>
 <?php
 
-function loadRegistrations($filename){
+function loadRegistrations($filename)
+{
     $json_data = file_get_contents($filename);
-    $arr_data = json_decode($json_data, true);
+    $arr_data = json_decode($json_data,true);
     return $arr_data;
 }
 
@@ -55,6 +50,7 @@ function saveDataJSON($filename, $name, $email, $phone)
 }
 
 $nameErr = NULL;
+
 $emailErr = NULL;
 $phoneErr = NULL;
 $name = NULL;
